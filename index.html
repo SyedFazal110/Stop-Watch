@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Stop Watch</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <p>
+<body id="body">
+
+    <h1 id="heading">Stopwatch</h1>
+
+    <p class="para">
         <span id="hours">0</span>:
         <span id="minutes">0</span>:
         <span id="seconds">0</span>
+
+        <div id="btn">
+            <button id="startbtn" onclick="startWatch()">Start</button>
+            <button id="stopbtn" onclick="stopWatch()">Stop</button>
+            <button id="resetbtn" onclick="resetWatch()">Reset</button>
+        </div>
     </p>
 
-    <button onclick="startWatch()">Start</button>
-    <button onclick="stopWatch()">Stop</button>
-    <button onclick="resetWatch()">Reset</button>
+    
     
     <script src="file.js"></script>
 </body>
