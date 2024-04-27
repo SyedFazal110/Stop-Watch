@@ -3,10 +3,12 @@ let minutes = document.querySelector("#minutes");
 let seconds = document.querySelector("#seconds");
 let startbtn = document.querySelector("#startbtn")
 
+
 let interval;
 let second = 0;
 let minute = 0;
 let hour = 0;
+
 
 function startWatch(){
     console.log("Watch Started")
@@ -23,22 +25,24 @@ function startWatch(){
                 }
             }
         }
-        startbtn.disabled = true
         seconds.innerHTML = second;
         minutes.innerHTML = minute;
         hours.innerHTML = hour;
     } , 1000)
+    startbtn.disabled = true;
 
 }
 
 function stopWatch(){
     console.log("Watch Stoped")
     clearInterval(interval)
+    startbtn.disabled = false;
 }
 
 function resetWatch(){
     console.log("Watch Reset")
     clearInterval(interval)
+    startbtn.disabled = false;
     second = 0;
     minute = 0;
     hour = 0;
