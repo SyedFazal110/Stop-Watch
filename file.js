@@ -1,6 +1,7 @@
 let hours = document.querySelector("#hours");
 let minutes = document.querySelector("#minutes");
 let seconds = document.querySelector("#seconds");
+let startbtn = document.querySelector("#startbtn")
 
 let interval;
 let second = 0;
@@ -22,6 +23,7 @@ function startWatch(){
                 }
             }
         }
+        startbtn.disabled = true
         seconds.innerHTML = second;
         minutes.innerHTML = minute;
         hours.innerHTML = hour;
